@@ -76,6 +76,7 @@ class Yahoo(Provider):
                 return ticker, df.drop_duplicates().dropna()
 
             except Exception:
+                print('status',url,data.status_code)
                 _time.sleep(backoff)
                 backoff = min(backoff * 2, 30)
 
