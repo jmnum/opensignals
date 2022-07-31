@@ -33,6 +33,7 @@ class Yahoo(Provider):
             period2=int(end.timestamp()),
             interval='1d',
             events='div,splits',
+            timeout=15,
         )
         while tries > 0:
             tries -= 1
