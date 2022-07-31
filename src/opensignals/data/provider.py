@@ -4,8 +4,10 @@ import datetime as dt
 import logging
 import pathlib
 import shutil
-from typing import Optional, List, Tuple
-
+#from typing import Optional, List, Tuple
+from typing import List, Optional, Dict, Tuple, Union
+from typing_extensions import Protocol
+    
 from dateutil.relativedelta import relativedelta, FR
 import pandas as pd
 from tqdm import tqdm
