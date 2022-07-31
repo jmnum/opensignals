@@ -78,7 +78,7 @@ class Yahoo(Provider):
             except Exception:
                 print('status',url,data.status_code)
                 if status_code==404:
-                       if data.json()["chart"]["code"][0]='Not Found':
+                       if data.json()["chart"]["code"][0]=='Not Found':
                           return ticker, empty_df()
                 _time.sleep(backoff)
                 backoff = min(backoff * 2, 30)
